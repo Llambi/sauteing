@@ -6,7 +6,11 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint --ext .ts,.tsx"
+		"ci:lint": "eslint --ext .ts,.tsx --ignore-path .gitignore .",
+		"ci:format": "prettier --ignore-path .gitignore -l .",
+		"lint": "yarn run ci:lint --fix",
+		"format": "yarn run ci:format --write",
+		"lint-format-staged": "lint-staged"
 	},
 	"dependencies": {
 		"global": "^4.4.0",
@@ -15,17 +19,16 @@
 		"react-dom": "17.0.1"
 	},
 	"devDependencies": {
-		"@types/node": "^14.14.9",
-		"@types/react": "^17.0.0",
-		"@typescript-eslint/eslint-plugin": "^4.8.2",
-		"@typescript-eslint/parser": "^4.8.2",
-		"eslint": "^7.14.0",
-		"eslint-config-prettier": "^6.15.0",
-		"eslint-plugin-prettier": "^3.1.4",
+		"@types/node": "^14.14.8",
+		"@types/react": "^16.9.56",
+		"@typescript-eslint/eslint-plugin": "^4.7.0",
+		"@typescript-eslint/parser": "^4.7.0",
+		"eslint": "^7.13.0",
 		"eslint-plugin-react": "^7.21.5",
+		"eslint-plugin-simple-import-sort": "^5.0.3",
 		"husky": "^4.3.0",
-		"prettier": "^2.2.0",
-		"pretty-quick": "^3.1.0",
-		"typescript": "^4.1.2"
+		"lint-staged": "^10.5.1",
+		"prettier": "^2.1.2",
+		"typescript": "^4.0.5"
 	}
 }
