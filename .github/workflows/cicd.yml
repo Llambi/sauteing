@@ -19,6 +19,7 @@ jobs:
       - run: yarn
       - run: yarn ci:format
       - run: yarn ci:lint
+      - run: yarn ci:test:cy
       - run: yarn build
 
   build:
