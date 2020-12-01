@@ -1,7 +1,7 @@
 import { Center, Container, Stack, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 
-import { Layout } from '../components';
+import { Layout } from '../components/Layout';
 
 export default function Home() {
 	return (
